@@ -31,5 +31,17 @@ Create a topic demo-2-distributed
 We can read the data with the kafka consumer service
 
      $ kafka-console-consumer --topic demo-2-distributed --from-beginning --bootstrap-server 127.0.0.1:9092
+
 ### Sink
+
+#### ElasticSearch
+
+Create a new sink connector type ElasticSearch confluent, add its properties and make sure the topic is enable and the twitter source connector we created before is also enable and publishing data into the demo-3-twitter topic.
+
+      # Now we have to run the docker with alias elasticsearch to map it.
+      $ docker-compose up kafka-cluster elasticsearch postgres 
+
+
+
+#### PostgreSQL
 
